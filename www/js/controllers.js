@@ -4,11 +4,10 @@ angular.module('starter.controllers', [])
 .controller('AccountCtrl', function($scope, $cordovaBarcodeScanner, $http) {
   $scope.insertdatako = function(){
      $cordovaBarcodeScanner.scan().then(function(imageData){
+      $scope.data = (imageData);
  $http.post(
     'https://api.mongolab.com/api/1/databases/testmobile/collections/savehere?apiKey=X8645ILWJXiV_Rmu4gZVn1URuu1WF1Ey', 
-  
-    $scope.data = (imageData),
-    alert(imageData.text)
+    imageData
   )
   .success(function(){
     console.log(arguments);
@@ -32,7 +31,7 @@ angular.module('starter.controllers', [])
 //      $http.post(
 //     'https://api.mongolab.com/api/1/databases/testmobile/collections/savehere?apiKey=X8645ILWJXiV_Rmu4gZVn1URuu1WF1Ey', 
 //     $scope.data = JSON.stringify(imageData.text)
-  
+  // scope.data = JSON.parse(imageData.text);
 //   )
 //   .success(function(){
 //     console.log(arguments);
