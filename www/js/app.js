@@ -19,7 +19,7 @@ angular.module('starter', ['ionic','ngCordova', 'starter.controllers'])
       StatusBar.styleDefault();
     }
   });
-})
+});
 
 //   .controller("ourController", function($scope, $cordovaBarcodeScanner, $http){
 //   $scope.scanBarcode = function(){
@@ -45,3 +45,4 @@ angular.module('starter', ['ionic','ngCordova', 'starter.controllers'])
 
 // }
 // });
+
