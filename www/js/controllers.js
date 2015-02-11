@@ -11,7 +11,7 @@ angular.module('starter.controllers', [])
 // var json = image.concat(date);
  $http.post(
    'https://api.mongolab.com/api/1/databases/testmobile/collections/savehere?apiKey=X8645ILWJXiV_Rmu4gZVn1URuu1WF1Ey', 
-      obj = JSON.parse(json) + JSON.stringify({'now': new Date()}
+      obj = JSON.parse(json) 
     
   )
   .success(function(){
