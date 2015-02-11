@@ -4,11 +4,13 @@ angular.module('starter.controllers', [])
 .controller('AccountCtrl', function($scope, $cordovaBarcodeScanner, $http) {
   $scope.insertdatako = function(){
      $cordovaBarcodeScanner.scan().then(function(imageData){
-   var json = imageData.text;
+   var image = imageData.text;
+   var date = [{"Date": new Date}];
+var json = image.concat(date);
  $http.post(
    'https://api.mongolab.com/api/1/databases/testmobile/collections/savehere?apiKey=X8645ILWJXiV_Rmu4gZVn1URuu1WF1Ey', 
-      obj = JSON.parse(json),
-      
+      obj = JSON.parse(json)
+    
   )
   .success(function(){
     alert("yes!!");
